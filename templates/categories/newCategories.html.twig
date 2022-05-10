@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<h1>Créer une nouvelle Catégorie</h1>
+	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	<div>
+		<p>
+			{{ form_row(form.libelle) }}</p>
+	</div>
+	<div>
+		<p>
+			{{ form_row(form.description) }}</p>
+	</div>
+
+	<div>
+		<p>
+			{{ form_row(form.Valider) }}</p>
+	</div>
+
+
+	{{ form_end(form) }}
+
+{% endblock %}

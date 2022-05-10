@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<product>
+		<h2>{{product.name | capitalize}}</h2>
+		<div class="metadata">
+			<span>
+				{{product.price}} €</span>
+		</div>
+		<div class="content">
+			<img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone11-red-select-2019_GEO_EMEA?wid=834&hei=1000&fmt=jpeg&qlt=95&.v=1567021767076" alt="">
+			<p class="text">{{product.description}}</p>
+		</div>
+	</product>
+
+
+{% endblock %}

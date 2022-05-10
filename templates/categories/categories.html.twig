@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+	<h1>Voici les categories actives</h1>
+
+	<div class="row mb-3">
+			<div class="col-6 col-md-4 themed-grid-col"><h2>Libelle</h2></div>
+			<div class="col-6 col-md-4 themed-grid-col"><h2>Description</h2></div>
+			<div class="col-6 col-md-4 themed-grid-col"><h2>Action</h2></div>
+	</div>
+
+	{% for category in categories %}
+		<div class="row mb-3">
+			<div class="col-6 col-md-4 themed-grid-col">{{category.libelle | capitalize}}</div>
+			<div class="col-6 col-md-4 themed-grid-col">{{category.description | capitalize}}</div>
+			<div class="col-6 col-md-4 themed-grid-col">
+				<a href="{{path('categories_show', {'id' : category.id})}}">
+					<button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+				</a>
+				<a href="{{path('categories_edit', {'id' : category.id})}}">
+					<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+				</a>
+				<a href="{{path('categories_show', {'id' : category.id})}}">
+					<button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+				</a>
+			</div>
+		</div>
+	{% endfor  %}
+
+
+{% endblock %}

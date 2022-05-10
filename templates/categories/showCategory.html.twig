@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<article>
+		<h2>{{category.libelle | capitalize}}</h2>
+		<div class="content">
+            <br>
+            <h4>Description</h4>
+			<p class="text">{{category.description}}</p>
+		</div>
+	</article>
+
+
+{% endblock %}

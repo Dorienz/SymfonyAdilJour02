@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Products
+			{% endblock %}
+		</title>
+
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+		<link href="../styles/index.css" rel="stylesheet">
+		<link href="../styles/blog.css" rel="stylesheet">
+
+
+	</head>
+	<body></body>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="{{ path('home')}}">Products Managements</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item">
+							<a class="nav-link active" href="{{ path('products_All')}}">Products
+								<span class="visually-hidden">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="{{ path('categories_All')}}">Categories
+								<span class="visually-hidden">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('categories_new')}}">Add a new Category</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{{ path('product_new')}}">Add a new Products</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link" href="{{path('app_register')}}">Add a new User</a>
+						</li>
+							
+					</ul>
+					<form class="d-flex" data-dashlane-rid="c7a2e7bfaf6ac7ef" data-form-type="">
+						<input class="form-control me-sm-2" type="text" placeholder="Search" data-dashlane-rid="b2bc2715677f3ad5" data-form-type="">
+						<button class="btn btn-secondary my-2 my-sm-0" type="submit" data-dashlane-label="true" data-dashlane-rid="fcf1ccb1f10aab03" data-form-type="">Search</button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		{% block body %}{% endblock %}
+	</body>
+</html>
